@@ -70,7 +70,7 @@ PrisonersDilemmaTournament/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/PrisonersDilemmaTournament.git
+git clone https://github.com/Shansit007/Prisoners-Dilemma-Game.git
 cd PrisonersDilemmaTournament/code
 ```
 
