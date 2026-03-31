@@ -8,16 +8,17 @@ A Python-based simulation of the **Iterated Prisoner’s Dilemma**, where multip
 
 This project models **multi-agent strategic interactions** using the classic concept of the **Prisoner’s Dilemma** from game theory.
 
-Each strategy plays against every other strategy over multiple rounds, and their performance is evaluated based on accumulated scores.
+It goes beyond traditional simulation by **integrating core Computer Science concepts with behavioral and emotional intelligence (EI) principles**, demonstrating how trust, retaliation, forgiveness, and exploitation emerge in repeated interactions.
 
 ---
 
 ## 🎯 Objective
 
-* Simulate repeated interactions between agents
+* Simulate repeated interactions between intelligent agents
 * Analyze cooperation vs defection behavior
+* Model **trust-building, betrayal, and forgiveness** dynamics
+* Bridge **algorithmic decision-making with emotional intelligence (EI)**
 * Identify the most successful strategies over time
-* Demonstrate emergence of trust and retaliation patterns
 
 ---
 
@@ -27,8 +28,9 @@ Each strategy plays against every other strategy over multiple rounds, and their
 2. Each strategy plays against every other strategy (pairwise)
 3. Each match runs for **200+ randomized turns**
 4. Moves are stored in a **history matrix**
-5. Scores are calculated based on payoff rules
-6. Final rankings are generated and saved in `results.txt`
+5. Strategies use past interactions (memory) to make decisions
+6. Scores are calculated based on payoff rules
+7. Final rankings are generated and saved in `results.txt`
 
 ---
 
@@ -72,39 +74,50 @@ git clone https://github.com/your-username/PrisonersDilemmaTournament.git
 cd PrisonersDilemmaTournament/code
 ```
 
-### 2. Run the simulation
+### 2. Install dependencies(optional)
+
+```bash
+pip install numpy
+```
+
+### 3. Run the simulation
 
 ```bash
 python prisonersDilemma.py
 ```
 
-### 3. View results
+### 4. View results
 
 * Output will be saved in `results.txt`
 
 ---
 
-## 🤖 Available Strategies
+## 🤖 Strategy Design & Behavioral Intelligence
 
-Some implemented strategies include:
+Each strategy represents a **distinct behavioral pattern**, mimicking real-world human decision-making:
 
-* **Tit-for-Tat** – Cooperate first, then mimic opponent
-* **Grim Trigger** – Cooperate until betrayed, then defect forever
-* **Detective** – Tests opponent and adapts behavior
-* **Simpleton** – Switches behavior based on opponent response
-* **Always Cooperate / Defect** – Basic baseline strategies
-* **Random Strategy** – Random decisions
-* **Forgiving Tit-for-Tat (FTFT)** – More tolerant version
+* **Tit-for-Tat** → Reciprocity & fairness
+* **Grim Trigger** → Zero-tolerance / strict punishment
+* **Detective** → Analytical testing + adaptive behavior
+* **Simpleton** → Reactive emotional adjustment
+* **Always Cooperate** → Blind trust
+* **Always Defect** → Pure selfishness
+* **Joss** → Opportunistic exploitation
+* **FTFT** → Forgiveness & tolerance
+
+These strategies collectively demonstrate how **emotional intelligence traits like trust, revenge, forgiveness, and adaptability** can be encoded into algorithmic logic.
 
 ---
 
 ## 🧠 Key Concepts
 
 * Game Theory
-* Iterated Decision Making
 * Multi-Agent Systems
-* Cooperation vs Competition
+* Iterated Decision Making
 * Strategy Optimization
+* Behavioral Modeling
+* **Emotional Intelligence in AI Systems**
+* Trust & Cooperation Dynamics
 
 ---
 
@@ -114,12 +127,17 @@ Create a new `.py` file inside `exampleStrats/`:
 
 ```python
 def strategy(history, memory):
-    # history: past moves
-    # memory: stored state
-    return 1, None  # Example: always cooperate
+    # history: past interactions
+    # memory: internal state (can model emotions/logic)
+    return 1, None
 ```
 
-Your strategy will automatically be included in the tournament.
+This flexibility allows you to design strategies that simulate:
+
+* Forgiveness thresholds
+* Trust decay
+* Risk-taking behavior
+* Emotional retaliation patterns
 
 ---
 
@@ -138,16 +156,19 @@ The `results.txt` file contains:
 
 * Purely selfish strategies fail in long-term interactions
 * Cooperative strategies with retaliation perform best
-* Balance between trust and punishment is key
+* **Balanced behavior (trust + punishment) yields optimal results**
+* Emotional intelligence-inspired strategies outperform rigid ones
 
 ---
 
 ## 🚀 Applications
 
-* Artificial Intelligence
-* Economics & Negotiation Systems
-* Evolutionary Algorithms
-* Behavioral Strategy Modeling
+* Artificial Intelligence & Multi-Agent Systems
+* Behavioral Economics
+* Negotiation & Decision Systems
+* Reinforcement Learning Concepts
+* Social Simulation Models
+* **Human-AI Interaction Modeling**
 
 ---
 
